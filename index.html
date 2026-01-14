@@ -150,6 +150,34 @@
             to { opacity: 1; }
         }
 
+        /* WHATSAPP BUTTON */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            padding: 15px 18px;
+            border-radius: 50%;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: 0.3s;
+            animation: pulse 2s infinite;
+            z-index: 999;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15);
+            background: #1ebe5d;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+            70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -185,13 +213,19 @@
 
 <body onload="switchLang('pl')">
 
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp-btn" href="https://wa.me/4915735173937" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 <header>
     <h1>Tobiasz Koguciuk</h1>
-    <p>Doradca Ubezpieczeniowy • Versicherungsberater</p>
+    <p>Doradca Ubezpieczeniowy • Versicherungsberater • Insurance Advisor</p>
 
     <div class="lang-switch">
         <button onclick="switchLang('pl')">Polski</button>
         <button onclick="switchLang('de')">Deutsch</button>
+        <button onclick="switchLang('en')">English</button>
     </div>
 </header>
 
@@ -218,7 +252,7 @@
             <div class="icon-box"><i class="fa-solid fa-house"></i> Ubezpieczenia mieszkania i domu</div>
             <div class="icon-box"><i class="fa-solid fa-shield-halved"></i> Ubezpieczenia OC</div>
             <div class="icon-box"><i class="fa-solid fa-building"></i> Ubezpieczenia firmowe</div>
-            <div class="icon-box"><i class="fa-solid fa-language"></i> Doradztwo PL/DE</div>
+            <div class="icon-box"><i class="fa-solid fa-language"></i> Doradztwo PL/DE/EN</div>
 
         </div>
 
@@ -227,6 +261,7 @@
 
             <p><strong>Firma:</strong> Profina</p>
             <p><strong>Telefon:</strong> 0157 3517 3937</p>
+            <p><strong>Email:</strong> koguciuk@pro-fina.de</p>
 
             <form action="mailto:koguciuk@pro-fina.de" method="post" enctype="text/plain">
                 <input type="text" name="Imię i nazwisko" placeholder="Imię i nazwisko" required>
@@ -240,54 +275,4 @@
     </div>
 
     <!-- NIEMIECKA WERSJA -->
-    <div data-lang="de">
-
-        <div class="section">
-            <h2>Über mich</h2>
-            <p>
-                Ich unterstütze Kunden in Deutschland und Polen bei der Auswahl der besten Versicherungen:
-                Leben, Gesundheit, Auto, Haus und finanzielle Absicherung. Transparenz und individuelle
-                Beratung stehen bei mir im Mittelpunkt.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Versicherungsangebot</h2>
-
-            <div class="icon-box"><i class="fa-solid fa-heart"></i> Lebensversicherung</div>
-            <div class="icon-box"><i class="fa-solid fa-notes-medical"></i> Krankenversicherung</div>
-            <div class="icon-box"><i class="fa-solid fa-car"></i> KFZ-Versicherung</div>
-            <div class="icon-box"><i class="fa-solid fa-house"></i> Haus- und Wohnungsversicherung</div>
-            <div class="icon-box"><i class="fa-solid fa-shield-halved"></i> Haftpflichtversicherung</div>
-            <div class="icon-box"><i class="fa-solid fa-building"></i> Firmenversicherungen</div>
-            <div class="icon-box"><i class="fa-solid fa-language"></i> Beratung DE/PL</div>
-
-        </div>
-
-        <div class="section">
-            <h2>Kontakt</h2>
-
-            <p><strong>Firma:</strong> Profina</p>
-            <p><strong>Telefon:</strong> 0157 3517 3937</p>
-
-            <form action="mailto:koguciuk@pro-fina.de" method="post" enctype="text/plain">
-                <input type="text" name="Name" placeholder="Name" required>
-                <input type="email" name="Email" placeholder="E-Mail" required>
-                <input type="tel" name="Telefon" placeholder="Telefonnummer" required>
-                <textarea name="Nachricht" rows="5" placeholder="Ihre Nachricht..." required></textarea>
-                <button type="submit">Senden</button>
-            </form>
-        </div>
-
-    </div>
-
-</div>
-
-<footer>
-    © 2026 Tobiasz Koguciuk – Doradca Ubezpieczeniowy / Versicherungsberater • Firma Profina • Tel. 0157 3517 3937
-</footer>
-
-</body>
-</html>
-
 
